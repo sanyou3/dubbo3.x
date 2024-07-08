@@ -80,6 +80,7 @@ import static org.apache.dubbo.common.convert.Converter.convertIfPossible;
 import static org.apache.dubbo.common.utils.StringUtils.isBlank;
 
 /**
+ * dubbo 中最重要的数据结构，没有之一，贯穿全dubbo
  * URL - Uniform Resource Locator (Immutable, ThreadSafe)
  * <p>
  * url example:
@@ -116,9 +117,19 @@ class URL implements Serializable {
 
     private static final long serialVersionUID = -1985165475234910535L;
 
+    /**
+     * 缓存
+     */
     private static Map<String, URL> cachedURLs = new LRUCache<>();
 
+    /**
+     * URL 协议部分
+     */
     private final URLAddress urlAddress;
+
+    /**
+     * url 路径参数
+     */
     private final URLParam urlParam;
 
     // ==== cache ====
@@ -129,6 +140,9 @@ class URL implements Serializable {
 
     private volatile transient Map<String, URL> urls;
 
+    /**
+     * 服务 serviceKey
+     */
     private transient String serviceKey;
     private transient String protocolServiceKey;
     protected volatile Map<String, Object> attributes;

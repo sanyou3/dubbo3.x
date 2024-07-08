@@ -39,12 +39,19 @@ import static org.apache.dubbo.common.constants.CommonConstants.PROVIDER_ASYNC_K
 
 /**
  * This Invoker works on provider side, delegates RPC to interface implementation.
+ * 生产者端使用的 最终会调到这里来调用真正的接口实现
  */
 public abstract class AbstractProxyInvoker<T> implements Invoker<T> {
     Logger logger = LoggerFactory.getLogger(AbstractProxyInvoker.class);
 
+    /**
+     * 真正的Service对象
+     */
     private final T proxy;
 
+    /**
+     * 接口类型
+     */
     private final Class<T> type;
 
     private final URL url;

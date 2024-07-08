@@ -20,6 +20,7 @@ import org.apache.dubbo.common.URL;
 import org.apache.dubbo.rpc.Invoker;
 
 /**
+ * 集群模式，内部需要根据具体的实现进行 复杂均衡 + 容错
  * This is the final Invoker type referenced by the RPC proxy on Consumer side.
  * <p>
  * A ClusterInvoker holds a group of normal invokers, stored in a Directory, mapping to one Registry.

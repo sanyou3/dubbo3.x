@@ -26,6 +26,8 @@ import org.apache.dubbo.rpc.RpcException;
 import java.util.List;
 
 /**
+ * 简单的名字就是目录的意思
+ * 里面会存很多 Invoker 因为有很多不同的协议，那么不同的协议就可以有很多 Invoker 可以通这里面获取所有的Incoker
  * Directory. (SPI, Prototype, ThreadSafe)
  * <p>
  * <a href="http://en.wikipedia.org/wiki/Directory_service">Directory Service</a>

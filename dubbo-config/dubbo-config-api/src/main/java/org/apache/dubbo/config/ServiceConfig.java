@@ -128,6 +128,9 @@ public class ServiceConfig<T> extends ServiceConfigBase<T> {
 
     /**
      * The exported services
+     * 一个服务可以被暴露很多次
+     * 比如可以暴露到不同的注册中心
+     * 暴露不同的通信协议
      */
     private final List<Exporter<?>> exporters = new ArrayList<Exporter<?>>();
 

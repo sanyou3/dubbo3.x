@@ -26,6 +26,9 @@ import java.util.List;
 
 /**
  * Protocol. (API/SPI, Singleton, ThreadSafe)
+ * 协议 主要是代表通信协议
+ * export 将Service接口按照具体的协议给暴露出去
+ * refer 通过具体的协议取调用Service接口
  */
 @SPI(value = "dubbo", scope = ExtensionScope.FRAMEWORK)
 public interface Protocol {
@@ -38,6 +41,8 @@ public interface Protocol {
     int getDefaultPort();
 
     /**
+     * 将服务给暴露出去
+     * Exporter 其实主要的作用就是可以将 服务 unexport 出去
      * Export service for remote invocation: <br>
      * 1. Protocol should record request source address after receive a request:
      * RpcContext.getServerAttachment().setRemoteAddress();<br>

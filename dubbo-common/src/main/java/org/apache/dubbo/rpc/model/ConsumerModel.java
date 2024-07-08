@@ -32,6 +32,8 @@ import java.util.TreeSet;
 
 /**
  * This model is bound to your reference's configuration, for example, group, version or method level configuration.
+ *
+ * 消费者模块
  */
 public class ConsumerModel extends ServiceModel {
     private final Set<String> apps = new TreeSet<>();

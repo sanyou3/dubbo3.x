@@ -59,6 +59,9 @@ import static org.apache.dubbo.remoting.Constants.DEFAULT_CONNECT_TIMEOUT;
 import static org.apache.dubbo.remoting.Constants.SERVER_KEY;
 import static org.apache.dubbo.rpc.protocol.rest.Constants.EXTENSION_KEY;
 
+/**
+ * 暴露Http接口
+ */
 public class RestProtocol extends AbstractProxyProtocol {
 
     private static final int DEFAULT_PORT = 80;
@@ -124,6 +127,7 @@ public class RestProtocol extends AbstractProxyProtocol {
 
         final Class resourceDef = GetRestful.getRootResourceClass(implClass) != null ? implClass : type;
 
+        //将接口暴露出去
         server.deploy(resourceDef, impl, contextPath);
 
         final RestProtocolServer s = server;

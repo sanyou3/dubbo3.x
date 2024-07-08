@@ -56,6 +56,7 @@ import static org.apache.dubbo.remoting.Constants.CHECK_KEY;
 
 /**
  * DynamicDirectory
+ * 动态 Invoker
  */
 public abstract class DynamicDirectory<T> extends AbstractDirectory<T> implements NotifyListener {
 

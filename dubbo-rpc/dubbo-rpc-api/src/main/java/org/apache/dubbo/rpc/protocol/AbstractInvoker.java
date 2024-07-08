@@ -56,6 +56,7 @@ import static org.apache.dubbo.rpc.Constants.SERIALIZATION_ID_KEY;
 
 /**
  * This Invoker works on Consumer side.
+ * 消费者端使用的
  */
 public abstract class AbstractInvoker<T> implements Invoker<T> {
 

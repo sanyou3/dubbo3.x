@@ -48,6 +48,13 @@ public interface MetadataReport {
     default void unPublishAppMetadata(SubscriberMetadataIdentifier identifier, MetadataInfo metadataInfo) {
     }
 
+    /**
+     * 从元数据中心获取
+     *
+     * @param identifier
+     * @param instanceMetadata
+     * @return
+     */
     default MetadataInfo getAppMetadata(SubscriberMetadataIdentifier identifier, Map<String, String> instanceMetadata) {
         return null;
     }

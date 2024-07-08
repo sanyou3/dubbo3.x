@@ -459,6 +459,7 @@ public class ReferenceConfig<T> extends ReferenceConfigBase<T> {
 
     /**
      * Get URLs from the registry and aggregate them.
+     * 从配置中获取注册中心的数据
      */
     private void aggregateUrlFromRegistry(Map<String, String> referenceParameters) {
         checkRegistry();
@@ -497,6 +498,7 @@ public class ReferenceConfig<T> extends ReferenceConfigBase<T> {
                 invoker = Cluster.getCluster(scopeModel, Cluster.DEFAULT).join(new StaticDirectory(curUrl, invokers), true);
             }
         } else {
+            // 注册中心层面的复杂均衡 多个注册中心  ->  每个注册中心有很多生产者
             List<Invoker<?>> invokers = new ArrayList<>();
             URL registryUrl = null;
             for (URL url : urls) {

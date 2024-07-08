@@ -39,7 +39,7 @@ public interface ProxyFactory {
     <T> T getProxy(Invoker<T> invoker) throws RpcException;
 
     /**
-     * create proxy.
+     * create proxy. 创建一个 Invoker 对应的代理对象
      *
      * @param invoker
      * @return proxy
@@ -48,7 +48,7 @@ public interface ProxyFactory {
     <T> T getProxy(Invoker<T> invoker, boolean generic) throws RpcException;
 
     /**
-     * create invoker.
+     * create invoker. 根据Service接口的实现获取一个对应的Invoker
      *
      * @param <T>
      * @param proxy

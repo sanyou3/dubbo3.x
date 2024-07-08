@@ -39,6 +39,7 @@ public class ModuleServiceRepository {
 
     /**
      * services
+     * 服务接口的描述信息
      */
     private ConcurrentMap<String, List<ServiceDescriptor>> services = new ConcurrentHashMap<>();
 

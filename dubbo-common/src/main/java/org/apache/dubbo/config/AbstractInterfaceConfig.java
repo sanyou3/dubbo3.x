@@ -151,6 +151,7 @@ public abstract class AbstractInterfaceConfig extends AbstractMethodConfig {
     /**
      * The registry list the service will register to
      * Also see {@link #registryIds}, only one of them will work.
+     * 注册中心的配置
      */
     protected List<RegistryConfig> registries;
 
